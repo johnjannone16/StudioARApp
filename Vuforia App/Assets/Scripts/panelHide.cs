@@ -5,7 +5,7 @@ using UnityEngine;
 public class panelHide : MonoBehaviour
 {
     public GameObject Panel;
-    private int counter;
+    int counter;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,6 +14,19 @@ public class panelHide : MonoBehaviour
 
 
     public void showHidePanel()
+    {
+        
+        if(swipeDetector.count == 1)
+        {
+            Panel.SetActive(true);
+        }
+        else if (swipeDetector.count == 0)
+        {
+            Panel.SetActive(false);
+        }
+    }
+
+    public void panelActive()
     {
         counter++;
         if(counter % 2 == 1)
