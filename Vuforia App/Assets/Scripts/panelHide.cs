@@ -7,9 +7,9 @@ public class panelHide : MonoBehaviour
     public GameObject Panel;
     int counter;
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-        Panel.SetActive(false);
+        counter = 1;
     }
 
 
